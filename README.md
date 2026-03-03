@@ -1,13 +1,13 @@
 # Vitruvius Cyber Website
 
-Marketing website for Vitruvius Cyber, built with Next.js App Router and Tailwind CSS v4.
+Marketing and conversion website for Vitruvius Cyber, built with Next.js App Router and Tailwind CSS v4.
 
 ## Stack
 
 - Next.js 16
 - React 19
 - TypeScript
-- Tailwind CSS v4 (`@import "tailwindcss"` + `@theme` tokens in `app/globals.css`)
+- Tailwind CSS v4
 - Deployed on Vercel
 
 ## Local Development
@@ -29,37 +29,42 @@ Open `http://localhost:3000`.
 ## Scripts
 
 ```bash
-npm run dev     # local dev
-npm run build   # production build
-npm run start   # run production build locally
-npm run lint    # eslint checks
+npm run dev
+npm run build
+npm run start
+npm run lint
 ```
 
-## Project Structure
+## Environment Variables
 
-```text
-app/                # routes and layout (App Router)
-components/         # reusable UI components
-public/             # static assets
-app/globals.css     # Tailwind import + design tokens
-postcss.config.cjs  # PostCSS plugin config
-```
+Copy `env.example` to `.env.local` and set values:
+
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_CALENDLY_URL`
+- `RESEND_API_KEY`
+- `LEAD_ALERT_FROM`
+- `LEAD_ALERT_TO`
+- `NOTION_API_KEY`
+- `NOTION_LEADS_DATABASE_ID`
 
 ## Routes
 
 - `/`
+- `/ai-security-assessment`
 - `/ai-governance`
 - `/architecture`
 - `/red-team`
 - `/compliance`
+- `/platforms`
 - `/insights`
+- `/insights/[slug]`
 - `/contact`
+- `/thank-you`
 
-## Tailwind Notes
+## API Endpoints
 
-- Theme tokens are defined in `app/globals.css` under `@theme`.
-- Use utility classes that map to those tokens (for example: `text-muted`, `bg-slate2/40`, `border-line`, `rounded-xl2`, `shadow-soft`).
-- Keep Tailwind/PostCSS config centralized at project root to avoid build inconsistencies.
+- `POST /api/lead`
+- `POST /api/lead-magnet`
 
 ## Vercel Deployment
 
@@ -68,6 +73,4 @@ Recommended Vercel settings:
 - Framework Preset: `Next.js`
 - Build Command: `npm run build`
 - Install Command: `npm install`
-- Output Directory: default (leave empty for Next.js)
-
-Any push to your connected branch should trigger a deployment automatically.
+- Output Directory: default

@@ -20,16 +20,18 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
+            <NavLink href="/ai-security-assessment">Assessment</NavLink>
             <NavLink href="/ai-governance">AI Governance</NavLink>
             <NavLink href="/architecture">Architecture</NavLink>
             <NavLink href="/red-team">Red Team</NavLink>
             <NavLink href="/compliance">Compliance</NavLink>
+            <NavLink href="/platforms">Platforms</NavLink>
             <NavLink href="/insights">Insights</NavLink>
             <Link
               href="/contact"
               className="rounded-full border border-gold/50 bg-gold/10 px-4 py-2 text-sm text-sand hover:bg-gold/20 transition"
             >
-              Book a Session
+              Request Assessment
             </Link>
           </nav>
 

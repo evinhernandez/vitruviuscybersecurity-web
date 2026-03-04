@@ -10,7 +10,7 @@ export default function Home() {
           <div className="py-20 md:py-28 reveal-up">
             <div className="max-w-4xl">
               <p className="text-xs tracking-[0.22em] uppercase text-cyan2">
-                Cinematic Enterprise Cybersecurity and AI Operations
+                Practical Cybersecurity and AI Risk Support
               </p>
 
               <h1 className="mt-6 text-4xl md:text-6xl font-semibold leading-[1.08] tracking-[0.03em]">

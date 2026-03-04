@@ -11,7 +11,7 @@ export default function Home() {
           <div className="py-20 md:py-28">
             <div className="max-w-3xl">
               <div className="text-xs tracking-[0.22em] text-gold uppercase">
-                Mid-Market B2B Cybersecurity and AI Risk
+                Enterprise Cybersecurity and AI Risk
               </div>
 
               <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight leading-tight">

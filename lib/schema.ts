@@ -6,7 +6,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: "Vitruvius Cyber Systems",
     url: getCanonical("/"),
-    logo: getCanonical("/favicon.ico"),
+    logo: getCanonical("/brand-mark.svg"),
     sameAs: ["https://vitruviuscyber.com"],
     description:
       "AI security, zero trust architecture, offensive validation, and enterprise risk engineering.",
@@ -79,7 +79,7 @@ export function articleSchema({
       name: "Vitruvius Cyber Systems",
       logo: {
         "@type": "ImageObject",
-        url: getCanonical("/favicon.ico"),
+        url: getCanonical("/brand-mark.svg"),
       },
     },
     keywords,

@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     ],
   }),
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://vitruviuscyber.com"),
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

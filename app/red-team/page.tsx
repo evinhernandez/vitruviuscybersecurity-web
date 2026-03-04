@@ -39,7 +39,7 @@ export default function RedTeam() {
               href="/contact"
               eventName="cta_click"
               payload={{ placement: "red-team", cta: "schedule-sprint" }}
-              className="inline-flex rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+              className="inline-flex rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
             >
               Schedule Red Team Sprint
             </TrackedCtaLink>

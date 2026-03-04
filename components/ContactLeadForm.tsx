@@ -96,7 +96,7 @@ export default function ContactLeadForm() {
             name="name"
             required
             onFocus={() => track("form_start", { formId: "lead-contact" })}
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function ContactLeadForm() {
             type="email"
             name="email"
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
           />
         </div>
 
@@ -115,7 +115,7 @@ export default function ContactLeadForm() {
           <input
             name="company"
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
           />
         </div>
 
@@ -124,7 +124,7 @@ export default function ContactLeadForm() {
           <input
             name="role"
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
           />
         </div>
 
@@ -134,7 +134,7 @@ export default function ContactLeadForm() {
             <select
               name="companySize"
               required
-              className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+              className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
               defaultValue=""
             >
               <option value="" disabled>
@@ -153,7 +153,7 @@ export default function ContactLeadForm() {
             <select
               name="urgency"
               required
-              className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+              className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
               defaultValue=""
             >
               <option value="" disabled>
@@ -173,7 +173,7 @@ export default function ContactLeadForm() {
           <select
             name="serviceInterest"
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
             defaultValue=""
           >
             <option value="" disabled>
@@ -192,7 +192,7 @@ export default function ContactLeadForm() {
           <select
             name="budgetBand"
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
             defaultValue=""
           >
             <option value="" disabled>
@@ -212,7 +212,7 @@ export default function ContactLeadForm() {
             name="message"
             rows={5}
             required
-            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+            className="mt-2 w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
           />
         </div>
 
@@ -221,7 +221,7 @@ export default function ContactLeadForm() {
         <button
           type="submit"
           disabled={submitState.status === "submitting"}
-          className="rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
+          className="rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
         >
           {submitState.status === "submitting" ? "Submitting..." : "Request Assessment"}
         </button>
@@ -232,7 +232,7 @@ export default function ContactLeadForm() {
       )}
 
       {submitState.status === "success" && (
-        <div className="mt-4 rounded-lg border border-gold/40 bg-gold/10 p-4 text-sm">
+        <div className="mt-4 rounded-lg border border-cyan/40 bg-cyan/10 p-4 text-sm">
           Request received. Next step: book your discovery call.
           <div className="mt-2">
             <a

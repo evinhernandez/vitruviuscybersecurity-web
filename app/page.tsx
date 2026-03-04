@@ -200,7 +200,7 @@ export default function Home() {
                 href="/contact"
                 eventName="cta_click"
                 payload={{ placement: "final-cta", cta: "book-discovery" }}
-                className="rounded-full bg-gold text-ink px-6 py-3 text-xs uppercase tracking-[0.14em] font-semibold hover:opacity-90"
+                className="rounded-full bg-cyan text-ink px-6 py-3 text-xs uppercase tracking-[0.14em] font-semibold hover:opacity-90"
               >
                 Book Discovery Call
               </TrackedCtaLink>

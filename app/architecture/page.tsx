@@ -39,7 +39,7 @@ export default function Architecture() {
               href="/contact"
               eventName="cta_click"
               payload={{ placement: "architecture", cta: "book-workshop" }}
-              className="inline-flex rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+              className="inline-flex rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
             >
               Book Architecture Workshop
             </TrackedCtaLink>

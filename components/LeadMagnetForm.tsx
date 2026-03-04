@@ -57,7 +57,7 @@ export default function LeadMagnetForm() {
         <input
           name="name"
           placeholder="Name"
-          className="w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+          className="w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
         />
 
         <input
@@ -65,7 +65,7 @@ export default function LeadMagnetForm() {
           name="email"
           required
           placeholder="Work email"
-          className="w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-gold/60"
+          className="w-full rounded-lg bg-ink/40 border border-line px-4 py-3 text-sm outline-none focus:border-cyan/60"
         />
 
         <input type="text" name="companyWebsite" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -73,7 +73,7 @@ export default function LeadMagnetForm() {
         <button
           type="submit"
           disabled={state.status === "submitting"}
-          className="rounded-full bg-gold text-ink px-5 py-2 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
+          className="rounded-full bg-cyan text-ink px-5 py-2 text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
         >
           {state.status === "submitting" ? "Sending..." : "Get Brief"}
         </button>

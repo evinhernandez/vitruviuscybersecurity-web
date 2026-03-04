@@ -13,7 +13,7 @@ export default function ThankYouPage() {
             href={calendlyUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+            className="inline-flex rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
           >
             Open Calendly
           </a>

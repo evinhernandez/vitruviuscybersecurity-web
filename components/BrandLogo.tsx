@@ -19,7 +19,7 @@ function Mark({ className = "h-8 w-8" }: { className?: string }) {
         <linearGradient id="vitruvius-edge" x1="10" y1="10" x2="100" y2="110">
           <stop offset="0" stopColor="#74f0d7" />
           <stop offset="0.5" stopColor="#38d9c1" />
-          <stop offset="1" stopColor="#d0b269" />
+          <stop offset="1" stopColor="#9bc4db" />
         </linearGradient>
       </defs>
 
@@ -41,7 +41,7 @@ function Mark({ className = "h-8 w-8" }: { className?: string }) {
       />
       <circle cx="60" cy="34" r="4" fill="#74f0d7" />
       <circle cx="60" cy="60" r="4" fill="#74f0d7" />
-      <circle cx="60" cy="86" r="4" fill="#d0b269" />
+      <circle cx="60" cy="86" r="4" fill="#9bc4db" />
     </svg>
   );
 }

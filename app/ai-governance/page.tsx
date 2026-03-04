@@ -54,7 +54,7 @@ export default function AIGovernance() {
                 href="/contact"
                 eventName="cta_click"
                 payload={{ placement: "ai-governance", cta: "schedule-assessment" }}
-                className="inline-flex rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+                className="inline-flex rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
               >
                 Schedule Assessment
               </TrackedCtaLink>

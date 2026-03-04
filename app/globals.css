@@ -9,7 +9,6 @@
   --color-sand: #ecf3ff;
   --color-cyan: #74f0d7;
   --color-cyan2: #3ad5c0;
-  --color-gold: #d0b269;
   --color-muted: #97adbf;
   --color-line: rgba(116, 240, 215, 0.24);
   --color-line-soft: rgba(148, 170, 189, 0.22);
@@ -36,7 +35,7 @@ body {
   color: var(--color-sand);
   background:
     radial-gradient(1200px 500px at 12% -10%, rgba(58, 213, 192, 0.2), transparent 60%),
-    radial-gradient(1000px 420px at 84% -20%, rgba(208, 178, 105, 0.14), transparent 60%),
+    radial-gradient(1000px 420px at 84% -20%, rgba(155, 196, 219, 0.14), transparent 60%),
     linear-gradient(160deg, #070b12 0%, #0a1019 35%, #0f1824 100%);
   font-family: "Sora", "IBM Plex Sans", "Eurostile", "Avenir Next", "Segoe UI", sans-serif;
   letter-spacing: 0.01em;

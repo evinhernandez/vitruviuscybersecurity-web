@@ -56,7 +56,7 @@ export default function PlatformsPage() {
                 href="/contact"
                 eventName="cta_click"
                 payload={{ placement: "platforms", cta: "book-discovery" }}
-                className="inline-flex rounded-full bg-gold text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
+                className="inline-flex rounded-full bg-cyan text-ink px-6 py-3 text-sm font-semibold hover:opacity-90 transition"
               >
                 Discuss Pilot Opportunities
               </TrackedCtaLink>

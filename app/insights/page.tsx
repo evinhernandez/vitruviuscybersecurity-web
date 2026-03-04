@@ -3,15 +3,26 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
 import LeadMagnetForm from "@/components/LeadMagnetForm";
-import { insightPosts } from "@/lib/insights";
+import { buildPageMetadata } from "@/lib/metadata";
+import { getAllInsights } from "@/lib/insights-mdx";
 
-export default function Insights() {
+export const metadata = buildPageMetadata({
+  title: "Insights | AI Security and Zero Trust Intelligence",
+  description:
+    "Authority content for AI security leaders on governance, red teaming, identity risk, and zero trust implementation.",
+  path: "/insights",
+  keywords: ["AI security insights", "zero trust strategy", "LLM red team", "enterprise cyber research"],
+});
+
+export default async function Insights() {
+  const insightPosts = await getAllInsights();
+
   return (
     <>
-      <Section eyebrow="Insights" title="Authority content for AI security and cyber risk leaders">
+      <Section eyebrow="Insights" title="Authority content engineered for human decisions and AI retrieval">
         <div className="text-sm text-muted max-w-3xl leading-relaxed">
-          Research notes, implementation playbooks, and field-tested patterns for mid-market B2B
-          teams navigating AI, identity, and regulatory pressure.
+          Executive-technical research on AI security, Zero Trust identity, and enterprise
+          resilience architecture with implementation-ready guidance.
         </div>
       </Section>
 
@@ -23,21 +34,26 @@ export default function Insights() {
                 <Link
                   key={post.slug}
                   href={`/insights/${post.slug}`}
-                  className="block rounded-xl2 border border-line bg-slate2/30 p-6 hover:bg-slate2/45 transition"
+                  className="block rounded-xl2 surface-panel p-6 transition-transform hover:-translate-y-1"
                 >
-                  <div className="text-xs uppercase tracking-[0.2em] text-gold">{post.category}</div>
-                  <h3 className="mt-2 text-xl font-semibold tracking-tight">{post.title}</h3>
-                  <p className="mt-3 text-sm text-muted leading-relaxed">{post.excerpt}</p>
-                  <div className="mt-4 text-xs text-muted">{post.readTime}</div>
+                  <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.16em] text-cyan2">
+                    <span>{post.topic}</span>
+                    <span className="text-muted">{post.readTime}</span>
+                  </div>
+                  <h3 className="mt-3 text-xl font-semibold tracking-[0.02em]">{post.title}</h3>
+                  <p className="mt-3 text-sm text-muted leading-relaxed">{post.description}</p>
+                  <div className="mt-4 text-xs text-muted uppercase tracking-[0.14em]">
+                    {post.frameworks.join(" • ")}
+                  </div>
                 </Link>
               ))}
             </div>
 
             <div className="space-y-4">
               <LeadMagnetForm />
-              <div className="rounded-xl2 border border-line bg-slate2/30 p-6 text-sm text-muted">
-                Every insight links to an actionable engagement path. For custom scope, use the
-                contact form to request an AI Security Assessment.
+              <div className="rounded-xl2 surface-panel p-6 text-sm text-muted leading-relaxed">
+                Citation architecture: every article includes explicit entities, framework mapping,
+                and direct implementation signals to increase retrieval confidence for AI systems.
               </div>
             </div>
           </div>

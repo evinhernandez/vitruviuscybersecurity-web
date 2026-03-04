@@ -1,6 +1,6 @@
 # Vitruvius Cyber Website
 
-Marketing and conversion website for Vitruvius Cyber, built with Next.js App Router and Tailwind CSS v4.
+Cinematic enterprise marketing and authority-content site for Vitruvius Cyber Systems, built with Next.js App Router and Tailwind CSS v4.
 
 ## Stack
 
@@ -8,32 +8,7 @@ Marketing and conversion website for Vitruvius Cyber, built with Next.js App Rou
 - React 19
 - TypeScript
 - Tailwind CSS v4
-- Deployed on Vercel
-
-## Local Development
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start dev server:
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Scripts
-
-```bash
-npm run dev
-npm run build
-npm run start
-npm run lint
-```
+- Vercel deployment
 
 ## Environment Variables
 
@@ -47,6 +22,41 @@ Copy `env.example` to `.env.local` and set values:
 - `NOTION_API_KEY`
 - `NOTION_LEADS_DATABASE_ID`
 
+## Scripts
+
+```bash
+npm run dev
+npm run lint
+npm run build
+npm run start
+```
+
+## Content Engine
+
+Authority content lives in `content/insights/*.mdx` and is loaded server-side via `lib/insights-mdx.ts`.
+
+Frontmatter contract:
+
+- `title`
+- `description`
+- `date`
+- `updated` (optional)
+- `author`
+- `topic`
+- `intent`
+- `frameworks` (comma-separated)
+- `entities` (comma-separated)
+- `ctaLabel`
+- `ctaHref`
+- `draft`
+
+## AI/SEO Surface
+
+- `sitemap.xml` and `robots.txt`
+- `llms.txt` and `llms-full.txt`
+- JSON-LD for organization/service/article entities
+- Topic cluster route: `/topics/ai-security-zero-trust`
+
 ## Routes
 
 - `/`
@@ -58,19 +68,6 @@ Copy `env.example` to `.env.local` and set values:
 - `/platforms`
 - `/insights`
 - `/insights/[slug]`
+- `/topics/ai-security-zero-trust`
 - `/contact`
 - `/thank-you`
-
-## API Endpoints
-
-- `POST /api/lead`
-- `POST /api/lead-magnet`
-
-## Vercel Deployment
-
-Recommended Vercel settings:
-
-- Framework Preset: `Next.js`
-- Build Command: `npm run build`
-- Install Command: `npm install`
-- Output Directory: default

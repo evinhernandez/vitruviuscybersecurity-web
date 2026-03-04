@@ -10,13 +10,13 @@ export default function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="py-14">
+    <section className="py-16 reveal-up">
       <Container>
         {eyebrow && (
-          <div className="text-xs tracking-[0.22em] text-gold uppercase">{eyebrow}</div>
+          <div className="text-xs uppercase tracking-[0.24em] text-cyan2">{eyebrow}</div>
         )}
-        <h2 className="mt-3 text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
-        <div className="mt-6">{children}</div>
+        <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-[0.03em]">{title}</h2>
+        <div className="mt-7">{children}</div>
       </Container>
     </section>
   );

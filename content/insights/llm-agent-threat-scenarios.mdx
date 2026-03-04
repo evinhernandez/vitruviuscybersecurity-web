@@ -1,0 +1,38 @@
+---
+title: Practical LLM and Agent Threat Scenarios You Should Test Now
+description: Threat scenarios and test patterns for prompt injection, tool abuse, and identity escalation in agentic systems.
+date: 2026-03-02
+author: Vitruvius Cyber Research
+topic: AI Security + Zero Trust
+intent: Technical
+frameworks: OWASP LLM Top 10, NIST AI RMF, MITRE ATT&CK
+entities: LLM security, agent security, prompt injection
+ctaLabel: Schedule Red Team Sprint
+ctaHref: /red-team
+draft: false
+---
+
+Agentic systems introduce compound risk because prompt handling, tool execution, and identity privileges combine in one chain.
+
+## Scenario 1: Prompt injection against connected tools
+
+An attacker manipulates instructions so the agent calls tools outside intended boundaries.
+
+## Scenario 2: Cross-context policy bypass
+
+Data from one context contaminates another, producing unsafe output or unauthorized data access.
+
+## Scenario 3: Identity escalation through automation accounts
+
+Over-permissioned service identities allow lateral movement once a workflow is compromised.
+
+## Scenario 4: Logging blind spots
+
+Without complete traceability from prompt to action, incident response cannot reconstruct impact.
+
+## Testing guidance
+
+- Treat every tool invocation as privileged execution.
+- Validate allow/deny lists under adversarial input.
+- Enforce least privilege for every non-human identity.
+- Capture structured logs for prompts, policy decisions, and actions.

@@ -1,17 +1,125 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0f1115;
-  --color-slate2: #141821;
-  --color-sand: #ededed;
-  --color-gold: #c6a34f;
-  --color-muted: #a9afbc;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.35);
-  --radius-xl2: 1.25rem;
+  --color-ink: #070b12;
+  --color-night: #0c121b;
+  --color-panel: #111b29;
+  --color-panel2: #172638;
+  --color-slate2: #111b29;
+  --color-sand: #ecf3ff;
+  --color-cyan: #74f0d7;
+  --color-cyan2: #3ad5c0;
+  --color-gold: #d0b269;
+  --color-muted: #97adbf;
+  --color-line: rgba(116, 240, 215, 0.24);
+  --color-line-soft: rgba(148, 170, 189, 0.22);
+  --shadow-soft: 0 16px 52px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(58, 213, 192, 0.12);
+  --radius-xl2: 1.2rem;
 }
 
-:root { color-scheme: dark; }
-html, body { height: 100%; }
-body { background: #0F1115; color: #EDEDED; }
-::selection { background: rgba(198, 163, 79, 0.25); }
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-sand);
+  background:
+    radial-gradient(1200px 500px at 12% -10%, rgba(58, 213, 192, 0.2), transparent 60%),
+    radial-gradient(1000px 420px at 84% -20%, rgba(208, 178, 105, 0.14), transparent 60%),
+    linear-gradient(160deg, #070b12 0%, #0a1019 35%, #0f1824 100%);
+  font-family: "Sora", "IBM Plex Sans", "Eurostile", "Avenir Next", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.26;
+  background-image:
+    linear-gradient(rgba(116, 240, 215, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(116, 240, 215, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 95%);
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.14;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Orbitron", "Rajdhani", "Sora", "IBM Plex Sans", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+a,
+button {
+  transition: all 220ms ease;
+}
+
+::selection {
+  background: rgba(58, 213, 192, 0.35);
+  color: #061019;
+}
+
+.surface-panel {
+  border: 1px solid var(--color-line-soft);
+  background:
+    linear-gradient(175deg, rgba(15, 25, 36, 0.86), rgba(11, 19, 28, 0.7));
+  box-shadow: var(--shadow-soft);
+}
+
+.surface-panel:hover {
+  border-color: var(--color-line);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+}
+
+.reveal-up {
+  animation: reveal-up 720ms ease-out both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
